@@ -20,13 +20,16 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta property="og:type" content="website">
+    <meta name="keywords" content="ѧϰ����������������ʼǣ��ճ�">
+    <meta name="description" content="ѧϰ����������������ʼǣ��ճ�">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Mr.Zhang">
 <meta property="og:url" content="https://228272062.github.io/tags/%E4%B8%AA%E4%BA%BA/index.html">
 <meta property="og:site_name" content="Mr.Zhang">
+<meta property="og:description" content="ѧϰ����������������ʼǣ��ճ�">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Zhang Junhui">
+<meta property="article:tag" content="ѧϰ����������������ʼǣ��ճ�">
 <meta name="twitter:card" content="summary">
     
     <link rel="shortcut icon" href="/img/avatar.jpg">
@@ -102,6 +105,13 @@
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/link"  >
+                <i class="icon icon-lg icon-link"></i>
+                Blogroll
+              </a>
+            </li>
+        
       </ul>
     </div>
   </div>
@@ -114,6 +124,16 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">Tags: 个人</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
         
         
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
@@ -232,7 +252,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://228272062.github.io/tags/%E4%B8%AA%E4%BA%BA/&title=Mr.Zhang&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://228272062.github.io/tags/%E4%B8%AA%E4%BA%BA/&title=Mr.Zhang&source=ѧϰ����������������ʼǣ��ճ�" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -272,6 +292,26 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 </script>
 
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
